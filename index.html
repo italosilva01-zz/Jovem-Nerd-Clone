@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="shortcut icon" href="img/icon.ico">
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/solid.css">
+
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans&display=swap" rel="stylesheet">
+
+
+    <title>Jovem Nerd - O mundo pop vira piada no Jovem Nerd</title>
+</head>
+
+<body>
+    <div class="">
+        <header class="mobile">
+            <div class="wrapper">
+                <!--Menu-->
+                <nav class="-open">
+                    <a href="#" onclick="menuMobile()">MENU <i class="fas fa-caret-down"></i></a>
+
+
+
+                </nav>
+                <div class="site-branding">
+                    <h1 class="logo">
+                        <a href="#">Jovem Nerd</a>
+                    </h1>
+                </div>
+                <nav class="menu-desktop">
+                    <ul>
+                        <li><a href="#">NerdCast</a></li>
+                        <li><a href="#">NerdOffice</a></li>
+                        <li><a href="#">NerdPlayer</a></li>
+                        <li><a href="#">Mais <i class="fas fa-caret-down"></i></a></li>
+                        <li><a href="#">NerdStore</a></li>
+                        <li><a href="#">Anuncie</a></li>
+                    </ul>
+                    <form action="">
+                        <label for="pesquisa">
+                            <input type="text" name="pesquisa" id="pesquisa" placeholder="Ex: NC 500">
+                            <button type="submit">Buscar <i class="fas fa-search"></i></button>
+                        </label>
+                    </form>
+                    <button class="night-mode-trigger"><i class="fas fa-lightbulb exer"></i> <span>Modo escuro</span>
+                    </button>
+                </nav>
+                <div class="pesquisa">
+                    <button>
+                        <i class="fas fa-search lupa" style="color:#fff;"></i>
+                    </button>
+                </div>
+        </header>
+        <div class="corpo">
+            <!--Menu Mobile-->
+            <nav class="nav-mobile">
+                <ul>
+                    <li><a href="#">Nerdcast</a></li>
+                    <li><a href="#">NerdOffice</a></li>
+                    <li><a href="#">NerdPlayer</a></li>
+                    <li><a href="#" onclick="menuDropdown()">Mais <i class="fas fa-caret-down"></i></a>
+                        <ul class="dropdown" id="aaa">
+                            <li><a href="#">SR.k</a></li>
+                            <li><a href="#">Nerdologia</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="#">Nerdstore</a></li>
+                    <li><a href="#">Anuncie</a></li>
+                </ul>
+            </nav>
+
+        </div>
+
+        <section class="sub-header">
+            <ul class="list container">
+                <li id="nerd-bunker"><a href="#" onclick="menuToggle()">nerdBunker
+                        <i class="fas fa-caret-down"></i>
+                    </a>
+                    <ul class="submenu">
+                        <li><a href="#">Direto do Bunker</a></li>
+                        <li><a href="#">Filmes</a></li>
+                        <li><a href="#">Games</a></li>
+                        <li><a href="#">Séries e TV</a></li>
+                        <li><a href="#">Animes e Mángas</a></li>
+                        <li><a href="#">HQs e Livros</a></li>
+                        <li><a href="#">Ciência e Tecnologia</a></li>
+                        <li><a href="#">Etc</a></li>
+                    </ul>
+                </li>
+                <ul>
+
+                    <li><a href="#">item 1</a></li>
+                    <li><a href="#">item 1</a></li>
+                    <li><a href="#">item 1</a></li>
+                </ul>
+            </ul>
+        </section>
+    </div>
+
+
+    <script src="https://kit.fontawesome.com/327151a601.js" crossorigin="anonymous"></script>
+    <script src="js/funcoes.js"></script>
+</body>
+
+</html>

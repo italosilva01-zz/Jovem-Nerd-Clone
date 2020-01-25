@@ -1,0 +1,12 @@
+{
+	"version": 3,
+	"file": "style.css",
+	"sources": [
+		"../sass/style.sass"
+	],
+	"sourcesContent": [
+		"$corTeste : #6A5ACD;\n\n"
+	],
+	"names": [],
+	"mappings": ""
+}

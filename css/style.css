@@ -1,0 +1,260 @@
+.container {
+  margin-left: 5%;
+  margin-right: 5%;
+}
+
+body {
+  font-family: "Open Sans", sans-serif;
+}
+
+header {
+  top: 0;
+  left: 0;
+  right: 0;
+}
+
+/*MOBILE*/
+.mobile {
+  background-color: #1e1e26;
+  position: fixed;
+  padding: 12px 0px;
+  width: 100%;
+}
+
+.wrapper {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  max-width: 1280px;
+  color: #fff;
+  position: relative;
+  align-items: center;
+  overflow: auto;
+  /*Menu*/
+  /*Logo*/
+  /*Pesquisa*/
+}
+.wrapper nav,
+.wrapper .site-branding,
+.wrapper .pesquisa {
+  width: 30%;
+  height: auto;
+}
+.wrapper .menu-desktop {
+  display: none;
+}
+.wrapper nav {
+  text-align: center;
+}
+.wrapper nav ul {
+  display: none;
+}
+.wrapper nav a {
+  text-decoration: none;
+  color: #fff;
+}
+.wrapper .site-branding {
+  width: 33%;
+  max-width: 80px;
+  height: 48px;
+}
+.wrapper .site-branding .logo {
+  background-image: url("../img/logo-jovemnerd.png");
+  background-repeat: no-repeat;
+  background-size: contain;
+  width: 100%;
+  height: 100%;
+  margin: 0;
+}
+.wrapper .site-branding .logo a {
+  color: transparent;
+}
+.wrapper .pesquisa {
+  text-align: right;
+}
+.wrapper .pesquisa button {
+  position: relative;
+  right: 13px;
+  background-color: #1e1e26;
+  border: none;
+}
+
+.menu-active nav.nav-mobile {
+  background-color: #1e1e26;
+  color: #fff;
+  position: fixed;
+  width: 100%;
+  z-index: 1111;
+}
+.menu-active nav.nav-mobile ul:not(.dropdown) {
+  display: block;
+  padding-bottom: 100%;
+}
+.menu-active nav.nav-mobile ul:not(.dropdown) li {
+  border-bottom: 1px solid #282830;
+}
+.menu-active nav.nav-mobile ul:not(.dropdown) li #aaa li {
+  background-color: #282830;
+  border-bottom: 1px solid #1e1e26;
+}
+.menu-active nav.nav-mobile ul:not(.dropdown) li a {
+  color: #fff;
+  text-decoration: none;
+  display: block;
+  padding: 12px 15px;
+  margin-left: 2%;
+  font-size: 18px;
+  font-weight: 500;
+  line-height: 22px;
+}
+
+/*Sub-menu*/
+.sub-header {
+  background-color: #14141c;
+  width: 100%;
+  position: fixed;
+}
+.sub-header ul.list {
+  display: flex;
+  justify-content: space-between;
+}
+.sub-header li#nerd-bunker {
+  background-image: url("../img/logo-nerdbunker.svg");
+  background-repeat: no-repeat;
+  display: inline;
+  min-width: 120px;
+  background-size: contain;
+  margin: 1%;
+  margin-left: 0%;
+}
+.sub-header li#nerd-bunker a {
+  color: transparent;
+  display: block;
+  height: 100%;
+}
+.sub-header li#nerd-bunker a i {
+  color: #3bb4b4;
+  position: absolute;
+  top: 16px;
+  left: 150px;
+  transition: all 0.1s;
+}
+.sub-header li#nerd-bunker a i.active {
+  transform: rotate(180deg);
+}
+.sub-header ul.submenu {
+  display: none;
+  background-color: #282830;
+  width: 60%;
+  position: fixed;
+  left: 0%;
+}
+.sub-header ul.submenu a {
+  color: white;
+}
+
+/*CORPO*/
+div.corpo {
+  margin-top: 72px;
+}
+div.corpo ul {
+  display: none;
+}
+
+/*Desktop*/
+@media screen and (min-width: 1024px) {
+  /*CABECALHO*/
+  header.mobile {
+    padding: 24px;
+  }
+  header.mobile .-open {
+    display: none;
+  }
+  header.mobile .wrapper .menu-desktop {
+    display: grid;
+    grid-template-columns: 56% 27% 10%;
+    width: 100%;
+    height: 33px;
+  }
+  header.mobile .wrapper .menu-desktop ul {
+    display: block;
+    position: relative;
+    top: 7px;
+  }
+  header.mobile .wrapper .menu-desktop ul li {
+    position: relative;
+    display: inline-block;
+    margin-left: 24px;
+  }
+  header.mobile .wrapper .menu-desktop ul li a {
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 19px;
+  }
+  header.mobile .wrapper .menu-desktop form {
+    width: 280px;
+    height: 20px;
+  }
+  header.mobile .wrapper .menu-desktop label {
+    border: 1px solid #fff;
+    border-radius: 25px;
+    display: block;
+    text-align: right;
+    overflow: hidden;
+    height: 32px;
+  }
+  header.mobile .wrapper .menu-desktop #pesquisa {
+    background-color: #1e1e26;
+    border: none;
+    font-size: 16px;
+    width: 160px;
+    color: #b4b4b4;
+    font-style: italic;
+  }
+  header.mobile .wrapper .menu-desktop button[type=submit] {
+    height: inherit;
+    padding: 3px 5px 4px;
+    width: 100px;
+    top: 1px;
+    margin: 1px;
+    border: none;
+    border-radius: 25px;
+    text-align: center;
+    background-color: #3bb4b4;
+    color: #fff;
+    font-weight: bold;
+    font-size: 16px;
+  }
+  header.mobile .wrapper .menu-desktop .night-mode-trigger {
+    background: transparent;
+    border: none;
+    color: #b4b4b4;
+    font-weight: bold;
+  }
+  header.mobile .wrapper .menu-desktop .exer {
+    margin-top: 10px;
+    position: relative;
+  }
+  header.mobile .wrapper .menu-desktop span {
+    font-size: none;
+    display: block;
+    width: 46px;
+    float: right;
+    text-align: left;
+  }
+  header.mobile .wrapper {
+    height: 84px;
+    margin: 0 auto;
+  }
+  header.mobile .wrapper .site-branding {
+    min-width: 140px;
+    width: 140px;
+    height: 84px;
+    margin-left: 1%;
+  }
+  header.mobile .pesquisa {
+    display: none;
+  }
+}
+
+/*# sourceMappingURL=style.css.map */

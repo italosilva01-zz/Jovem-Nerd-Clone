@@ -1,0 +1,330 @@
+$corBase1:#1e1e26;
+$corFonteDefautl: #fff;
+$bacgroundSubMenu:#282830;
+
+@mixin estiloCabecalhoPadrao($corPreto) {
+  background-color: $corPreto;
+  position: fixed;
+}
+
+.container {
+  margin-left: 5%;
+  margin-right: 5%;
+}
+
+body {
+  font-family: 'Open Sans', sans-serif;
+}
+
+header {
+  top: 0;
+  left: 0;
+  right: 0;
+}
+
+
+/*MOBILE*/
+.mobile {
+  @include estiloCabecalhoPadrao($corBase1);
+  padding: 12px 0px;
+  width: 100%;
+
+
+}
+
+//Cabecalho
+
+.wrapper {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  max-width: 1280px;
+  color: $corFonteDefautl;
+  position: relative;
+  align-items: center;
+  overflow: auto;
+
+  nav,
+  .site-branding,
+  .pesquisa {
+    width: 30%;
+    height: auto;
+  }
+
+  .menu-desktop {
+    display: none;
+  }
+
+  /*Menu*/
+  nav {
+    text-align: center;
+
+    ul {
+      display: none;
+    }
+
+    a {
+      text-decoration: none;
+      color: $corFonteDefautl;
+    }
+
+  }
+
+  /*Logo*/
+
+  .site-branding {
+    width: 33%;
+    max-width: 80px;
+    height: 48px;
+
+
+    .logo {
+      background-image: url('../img/logo-jovemnerd.png');
+      background-repeat: no-repeat;
+      background-size: contain;
+      width: 100%;
+      height: 100%;
+      margin: 0;
+
+      a {
+        color: transparent;
+      }
+    }
+
+  }
+
+  /*Pesquisa*/
+
+  .pesquisa {
+    text-align: right;
+
+    button {
+      position: relative;
+      right: 13px;
+      background-color: $corBase1;
+      border: none;
+    }
+
+  }
+
+
+}
+
+.menu-active {
+  nav.nav-mobile {
+    background-color: $corBase1;
+    color: $corFonteDefautl;
+    position: fixed;
+    width: 100%;
+    z-index: 1111;
+    ul:not(.dropdown) {
+      display: block;
+      padding-bottom: 100%;
+
+      li {
+        border-bottom: 1px solid #282830;
+        ;
+
+        #aaa li {
+          background-color: #282830;
+          border-bottom: 1px solid #1e1e26;
+
+        }
+
+        a {
+          color: $corFonteDefautl;
+          text-decoration: none;
+          display: block;
+          padding: 12px 15px;
+          margin-left: 2%;
+
+          font-size: 18px;
+          font-weight: 500;
+          line-height: 22px;
+        }
+      }
+    }
+
+
+  }
+
+}
+
+/*Sub-menu*/
+.sub-header {
+  background-color: #14141c;
+  width: 100%;
+  position: fixed;
+
+  ul.list {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  li#nerd-bunker {
+    background-image: url("../img/logo-nerdbunker.svg");
+    background-repeat: no-repeat;
+    display: inline;
+    min-width: 120px;
+    background-size: contain;
+    margin: 1%;
+    margin-left: 0%;
+
+  }
+
+  li#nerd-bunker a {
+    color: transparent;
+    display: block;
+    height: 100%;
+  }
+
+  li#nerd-bunker a i {
+    color: #3bb4b4;
+    position: absolute;
+    top: 16px;
+    left: 150px;
+    transition: all 0.1s;
+  }
+
+  li#nerd-bunker a i.active {
+    transform: rotate(180deg);
+  }
+
+  ul.submenu {
+    display: none;
+    background-color: $bacgroundSubMenu;
+    width: 60%;
+    position: fixed;
+    left: 0%;
+  }
+  ul.submenu a{
+    color: white;
+  }
+}
+
+/*CORPO*/
+
+div.corpo {
+  margin-top: 72px;
+
+  ul {
+    display: none;
+  }
+}
+
+/*Desktop*/
+@media screen and (min-width:1024px) {
+
+  /*CABECALHO*/
+  header.mobile {
+    padding: 24px;
+
+    .-open {
+      display: none;
+
+    }
+
+    .wrapper .menu-desktop {
+      display: grid;
+      grid-template-columns: 56% 27% 10%;
+      width: 100%;
+      height: 33px;
+
+      ul {
+        display: block;
+        position: relative;
+        top: 7px;
+
+        li {
+          position: relative;
+          display: inline-block;
+          margin-left: 24px;
+
+          a {
+            font-weight: 500;
+            font-size: 16px;
+            line-height: 19px;
+          }
+        }
+      }
+
+      form {
+        width: 280px;
+        height: 20px;
+      }
+
+      label {
+        border: 1px solid $corFonteDefautl;
+        border-radius: 25px;
+        display: block;
+        text-align: right;
+        overflow: hidden;
+        height: 32px;
+
+      }
+
+      #pesquisa {
+        background-color: $corBase1;
+        border: none;
+        font-size: 16px;
+        width: 160px;
+        color: #b4b4b4;
+        font-style: italic;
+
+      }
+
+      button[type="submit"] {
+        height: inherit;
+        padding: 3px 5px 4px;
+        width: 100px;
+        top: 1px;
+        margin: 1px;
+        border: none;
+        border-radius: 25px;
+        text-align: center;
+        background-color: #3bb4b4;
+        color: $corFonteDefautl;
+        font-weight: bold;
+        font-size: 16px;
+      }
+
+      .night-mode-trigger {
+        background: transparent;
+        border: none;
+        color: #b4b4b4;
+        font-weight: bold;
+      }
+
+      .exer {
+        margin-top: 10px;
+        position: relative;
+      }
+
+      span {
+        font-size: none;
+        display: block;
+        width: 46px;
+        float: right;
+        text-align: left;
+      }
+    }
+
+    .wrapper {
+      height: 84px;
+      margin: 0 auto;
+
+      .site-branding {
+        min-width: 140px;
+        width: 140px;
+        height: 84px;
+        margin-left: 1%;
+      }
+    }
+
+    .pesquisa {
+      display: none;
+    }
+  }
+
+
+}
