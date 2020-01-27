@@ -24,7 +24,7 @@ header {
 .wrapper {
   display: flex;
   flex-direction: row;
-  justify-content: space-between;
+  justify-content: space-around;
   max-width: 1280px;
   color: #fff;
   position: relative;
@@ -42,9 +42,6 @@ header {
 }
 .wrapper .menu-desktop {
   display: none;
-}
-.wrapper nav {
-  text-align: center;
 }
 .wrapper nav ul {
   display: none;
@@ -113,6 +110,7 @@ header {
   background-color: #14141c;
   width: 100%;
   position: fixed;
+  height: 45px;
 }
 .sub-header ul.list {
   display: flex;
@@ -137,7 +135,7 @@ header {
   position: absolute;
   top: 16px;
   left: 150px;
-  transition: all 0.1s;
+  transition: all 0.5s;
 }
 .sub-header li#nerd-bunker a i.active {
   transform: rotate(180deg);
@@ -148,9 +146,47 @@ header {
   width: 60%;
   position: fixed;
   left: 0%;
+  border-radius: 0px 0px 6px 6px;
 }
-.sub-header ul.submenu a {
+.sub-header ul.submenu li {
+  border-bottom: 1px solid #1e1e26;
+}
+.sub-header ul#submenu a {
   color: white;
+  text-decoration: none;
+  padding: 17px 12px 17px 18px;
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 24px;
+}
+.sub-header ul#submenu a::before {
+  content: "";
+  width: 6px;
+  height: 22px;
+  border-radius: 6px;
+  display: inline-block;
+  vertical-align: middle;
+  background-color: #3bb4b4;
+  margin-top: -3px;
+  margin-right: 6px;
+}
+.sub-header ul#submenu li.filmes a::before {
+  background-color: #d72337;
+}
+.sub-header ul#submenu li.games a::before {
+  background-color: #82af69;
+}
+.sub-header ul#submenu li.series a::before {
+  background-color: #915faf;
+}
+.sub-header ul#submenu li.animes-mangas a::before {
+  background-color: #d241a5;
+}
+.sub-header ul#submenu li.hq-livros a::before {
+  background-color: #f59b37;
+}
+.sub-header ul#submenu li.ciencia-tecnologia a::before {
+  background-color: #286ed2;
 }
 
 /*CORPO*/
