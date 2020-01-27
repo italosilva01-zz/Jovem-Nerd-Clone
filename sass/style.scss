@@ -15,8 +15,8 @@ $colorDarkBlue:#286ed2;
 }
 
 .container {
-  margin-left: 5%;
-  margin-right: 5%;
+  margin-left: 3%;
+  margin-right: 3%;
 }
 
 body {
@@ -27,6 +27,7 @@ header {
   top: 0;
   left: 0;
   right: 0;
+  z-index: 1000000;
 }
 
 
@@ -123,6 +124,8 @@ header {
     position: fixed;
     width: 100%;
     z-index: 1111;
+    top: 9%;
+    right: 0;
 
     ul:not(.dropdown) {
       display: block;
@@ -143,7 +146,6 @@ header {
           text-decoration: none;
           display: block;
           padding: 12px 15px;
-          margin-left: 2%;
 
           font-size: 18px;
           font-weight: 500;
@@ -163,6 +165,9 @@ header {
   width: 100%;
   position: fixed;
   height: 45px;
+  z-index: 0;
+  top: 72px;
+  
 
   ul.list {
     display: flex;
@@ -252,7 +257,11 @@ header {
       background-color: $colorDarkBlue;
     }
 
-  
+  .submenu i{
+    margin-left:50px;
+    margin-top: 5px;
+    color: $corFonteDefautl !important;
+  }
   
 }
 
