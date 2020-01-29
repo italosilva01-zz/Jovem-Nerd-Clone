@@ -167,14 +167,14 @@ header {
   height: 45px;
   z-index: 0;
   top: 72px;
-  
+
 
   ul.list {
     display: flex;
     justify-content: space-between;
   }
 
-  li#nerd-bunker {
+  li.nerd-bunker {
     background-image: url("../img/logo-nerdbunker.svg");
     background-repeat: no-repeat;
     display: inline;
@@ -185,13 +185,13 @@ header {
 
   }
 
-  li#nerd-bunker a {
+  li.nerd-bunker a {
     color: transparent;
     display: block;
     height: 100%;
   }
 
-  li#nerd-bunker a i {
+  li.nerd-bunker a i {
     color: #3bb4b4;
     position: absolute;
     top: 16px;
@@ -199,7 +199,7 @@ header {
     transition: all 0.5s;
   }
 
-  li#nerd-bunker a i.active {
+  li.nerd-bunker a i.active {
     transform: rotate(180deg);
   }
 
@@ -207,7 +207,7 @@ header {
     display: none;
     background-color: $bacgroundSubMenu;
     width: 60%;
-    
+
     position: fixed;
     left: 0%;
     border-radius: 0px 0px 6px 6px;
@@ -217,7 +217,7 @@ header {
     border-bottom: 1px solid #1e1e26;
   }
 
-  ul#submenu a {
+  ul.submenu a {
     color: white;
     text-decoration: none;
     padding: 17px 12px 17px 18px;
@@ -226,7 +226,7 @@ header {
     line-height: 24px;
   }
 
-  ul#submenu a::before {
+  ul.submenu a::before {
     content: "";
     width: 6px;
     height: 22px;
@@ -238,31 +238,53 @@ header {
     margin-right: 6px;
   }
 
-  ul#submenu li.filmes a::before {
+  ul.submenu li.filmes a::before {
     background-color: $colorRed;
   }
-  ul#submenu li.games a::before{
+
+  ul.submenu li.games a::before {
     background-color: $colorGreen;
   }
-  ul#submenu li.series a::before{
+
+  ul.submenu li.series a::before {
     background-color: $colorPurple;
   }
-  ul#submenu li.animes-mangas a::before{
+
+  ul.submenu li.animes-mangas a::before {
     background-color: $colorPink;
   }
-  ul#submenu li.hq-livros a::before{
+
+  ul.submenu li.hq-livros a::before {
     background-color: $colorOrange;
   }
-    ul#submenu li.ciencia-tecnologia a::before{
-      background-color: $colorDarkBlue;
+
+  ul.submenu li.ciencia-tecnologia a::before {
+    background-color: $colorDarkBlue;
+  }
+
+  .submenu {
+    i {
+      margin-left: 50px;
+      margin-top: 5px;
+
+
     }
 
-  .submenu i{
-    margin-left:50px;
-    margin-top: 5px;
-    color: $corFonteDefautl !important;
+    .direto-bunker {
+      i {
+        color: $corFonteDefautl;
+      }
+    }
+
+    .submenu-direto-bunker {
+      display: none;
+    }
   }
-  
+
+  .blue {
+    color: $colorDarkBlue !important;
+  }
+
 }
 
 /*CORPO*/

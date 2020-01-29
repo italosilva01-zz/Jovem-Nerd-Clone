@@ -120,7 +120,7 @@ header {
   display: flex;
   justify-content: space-between;
 }
-.sub-header li#nerd-bunker {
+.sub-header li.nerd-bunker {
   background-image: url("../img/logo-nerdbunker.svg");
   background-repeat: no-repeat;
   display: inline;
@@ -129,19 +129,19 @@ header {
   margin: 1%;
   margin-left: 0%;
 }
-.sub-header li#nerd-bunker a {
+.sub-header li.nerd-bunker a {
   color: transparent;
   display: block;
   height: 100%;
 }
-.sub-header li#nerd-bunker a i {
+.sub-header li.nerd-bunker a i {
   color: #3bb4b4;
   position: absolute;
   top: 16px;
   left: 150px;
   transition: all 0.5s;
 }
-.sub-header li#nerd-bunker a i.active {
+.sub-header li.nerd-bunker a i.active {
   transform: rotate(180deg);
 }
 .sub-header ul.submenu {
@@ -155,7 +155,7 @@ header {
 .sub-header ul.submenu li {
   border-bottom: 1px solid #1e1e26;
 }
-.sub-header ul#submenu a {
+.sub-header ul.submenu a {
   color: white;
   text-decoration: none;
   padding: 17px 12px 17px 18px;
@@ -163,7 +163,7 @@ header {
   font-weight: 500;
   line-height: 24px;
 }
-.sub-header ul#submenu a::before {
+.sub-header ul.submenu a::before {
   content: "";
   width: 6px;
   height: 22px;
@@ -174,28 +174,36 @@ header {
   margin-top: -3px;
   margin-right: 6px;
 }
-.sub-header ul#submenu li.filmes a::before {
+.sub-header ul.submenu li.filmes a::before {
   background-color: #d72337;
 }
-.sub-header ul#submenu li.games a::before {
+.sub-header ul.submenu li.games a::before {
   background-color: #82af69;
 }
-.sub-header ul#submenu li.series a::before {
+.sub-header ul.submenu li.series a::before {
   background-color: #915faf;
 }
-.sub-header ul#submenu li.animes-mangas a::before {
+.sub-header ul.submenu li.animes-mangas a::before {
   background-color: #d241a5;
 }
-.sub-header ul#submenu li.hq-livros a::before {
+.sub-header ul.submenu li.hq-livros a::before {
   background-color: #f59b37;
 }
-.sub-header ul#submenu li.ciencia-tecnologia a::before {
+.sub-header ul.submenu li.ciencia-tecnologia a::before {
   background-color: #286ed2;
 }
 .sub-header .submenu i {
   margin-left: 50px;
   margin-top: 5px;
-  color: #fff !important;
+}
+.sub-header .submenu .direto-bunker i {
+  color: #fff;
+}
+.sub-header .submenu .submenu-direto-bunker {
+  display: none;
+}
+.sub-header .blue {
+  color: #286ed2 !important;
 }
 
 /*CORPO*/

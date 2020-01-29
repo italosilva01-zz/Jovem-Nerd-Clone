@@ -60,4 +60,12 @@ function menuToggle(){
     }
   
 }
-dadsds
+function submenuBunker(){
+    let link = document.querySelector(".direto-bunker a");
+    let icon = document.querySelector(".direto-bunker a i");
+
+    link.classList.toggle("blue");
+    icon.classList.toggle("blue");
+    console.log(item);
+
+}
