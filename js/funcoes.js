@@ -63,9 +63,17 @@ function menuToggle(){
 function submenuBunker(){
     let link = document.querySelector(".direto-bunker a");
     let icon = document.querySelector(".direto-bunker a i");
+    let submenu = document.querySelector(".submenu-direto-bunker");
 
     link.classList.toggle("blue");
     icon.classList.toggle("blue");
-    console.log(item);
 
-}
+    if(link.classList.contains("blue")){
+        submenu.style.display = "inline";
+    }else{
+        submenu.style.display = "none";
+    }
+    
+    
+
+};

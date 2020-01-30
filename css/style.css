@@ -202,8 +202,17 @@ header {
 .sub-header .submenu .submenu-direto-bunker {
   display: none;
 }
+.sub-header .submenu .submenu-direto-bunker a {
+  background-color: #1e1e26;
+  border: none;
+  border-bottom: 1px solid #282830;
+}
+.sub-header .submenu .submenu-direto-bunker a::before {
+  display: none;
+}
 .sub-header .blue {
-  color: #286ed2 !important;
+  color: #3bb4b4 !important;
+  display: inline;
 }
 
 /*CORPO*/

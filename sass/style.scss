@@ -7,7 +7,7 @@ $colorPurple:#915faf;
 $colorPink:#d241a5;
 $colorOrange:#f59b37;
 $colorDarkBlue:#286ed2;
-
+$colorBabyBlue: #3bb4b4;
 
 @mixin estiloCabecalhoPadrao($corPreto) {
   background-color: $corPreto;
@@ -278,11 +278,22 @@ header {
 
     .submenu-direto-bunker {
       display: none;
+
+      a {
+        background-color: $corBase1;
+        border:none;
+        border-bottom: 1px solid $bacgroundSubMenu;
+
+      }
+      a::before{
+        display: none;
+      }
     }
   }
 
   .blue {
-    color: $colorDarkBlue !important;
+    color: $colorBabyBlue !important;
+    display: inline;
   }
 
 }
