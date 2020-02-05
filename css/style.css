@@ -119,6 +119,7 @@ header {
 .sub-header ul.list {
   display: flex;
   justify-content: space-between;
+  height: 100%;
 }
 .sub-header li.nerd-bunker {
   background-image: url("../img/logo-nerdbunker.svg");
@@ -133,12 +134,13 @@ header {
   color: transparent;
   display: block;
   height: 100%;
+  margin-bottom: 0%;
 }
 .sub-header li.nerd-bunker a i {
   color: #3bb4b4;
   position: absolute;
-  top: 16px;
-  left: 150px;
+  top: 18px;
+  left: 140px;
   transition: all 0.5s;
 }
 .sub-header li.nerd-bunker a i.active {
@@ -214,6 +216,22 @@ header {
   color: #3bb4b4 !important;
   display: inline;
 }
+.sub-header .menu-rolante {
+  width: 195px;
+  display: flex;
+  align-items: center;
+  overflow-x: scroll;
+}
+.sub-header .menu-rolante a {
+  text-align: center;
+  width: max-content;
+  display: block;
+  text-decoration: none;
+  color: #3bb4b4;
+}
+.sub-header .menu-rolante li {
+  margin-right: 10%;
+}
 
 /*CORPO*/
 div.corpo {
@@ -224,7 +242,7 @@ div.corpo ul {
 }
 
 /*Desktop*/
-@media screen and (min-width: 1024px) {
+@media (min-width: 1004px) {
   /*CABECALHO*/
   header.mobile {
     padding: 24px;
@@ -316,6 +334,24 @@ div.corpo ul {
   }
   header.mobile .pesquisa {
     display: none;
+  }
+
+  .sub-header {
+    top: 125px;
+    height: 12%;
+  }
+  .sub-header .nerd-bunker {
+    background-size: auto;
+  }
+  .sub-header .nerd-bunker a i {
+    top: 27px !important;
+    left: 189px !important;
+  }
+  .sub-header .nerd-bunker .submenu {
+    width: 30%;
+  }
+  .sub-header .menu-rolante {
+    overflow-x: none;
   }
 }
 

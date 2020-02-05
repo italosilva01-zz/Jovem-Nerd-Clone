@@ -1,3 +1,4 @@
+
 $corBase1:#1e1e26;
 $corFonteDefautl: #fff;
 $bacgroundSubMenu:#282830;
@@ -172,6 +173,7 @@ header {
   ul.list {
     display: flex;
     justify-content: space-between;
+    height: 100%;
   }
 
   li.nerd-bunker {
@@ -189,13 +191,15 @@ header {
     color: transparent;
     display: block;
     height: 100%;
+    margin-bottom: 0%;
+
   }
 
   li.nerd-bunker a i {
     color: #3bb4b4;
     position: absolute;
-    top: 16px;
-    left: 150px;
+    top: 18px;
+    left: 140px;
     transition: all 0.5s;
   }
 
@@ -207,7 +211,6 @@ header {
     display: none;
     background-color: $bacgroundSubMenu;
     width: 60%;
-
     position: fixed;
     left: 0%;
     border-radius: 0px 0px 6px 6px;
@@ -281,11 +284,12 @@ header {
 
       a {
         background-color: $corBase1;
-        border:none;
+        border: none;
         border-bottom: 1px solid $bacgroundSubMenu;
 
       }
-      a::before{
+
+      a::before {
         display: none;
       }
     }
@@ -294,6 +298,28 @@ header {
   .blue {
     color: $colorBabyBlue !important;
     display: inline;
+  }
+
+  .menu-rolante {
+    width: 195px;
+
+    display: flex;
+    align-items: center;
+    overflow-x: scroll;
+
+    a {
+      text-align: center;
+      width: max-content;
+      display: block;
+      text-decoration: none;
+      color: $colorBabyBlue;
+
+    }
+
+    li {
+      margin-right: 10%;
+
+    }
   }
 
 }
@@ -305,11 +331,12 @@ div.corpo {
 
   ul {
     display: none;
+
   }
 }
 
 /*Desktop*/
-@media screen and (min-width:1024px) {
+@media(min-width:1004px) {
 
   /*CABECALHO*/
   header.mobile {
@@ -422,5 +449,25 @@ div.corpo {
     }
   }
 
+  .sub-header {
+    top: 125px;
+    height: 12%;
+
+    .nerd-bunker {
+      background-size: auto;
+      a i {
+        top: 27px !important;
+        left: 189px !important;
+      }
+
+      .submenu {
+        width: 30%;
+      }
+    }
+    .menu-rolante{
+      overflow-x: none;
+    }
+
+  }
 
 }
